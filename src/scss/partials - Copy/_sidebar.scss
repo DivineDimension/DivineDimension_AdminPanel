@@ -1,0 +1,76 @@
+.sidebar{
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    width: 350px;
+    padding-bottom: 35px;
+    background: linear-gradient(326.98deg, rgba(0, 0, 0, 0) -32.47%, rgba(0, 0, 0, 0.72) 183.06%);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    backdrop-filter: blur(16px);
+    border-radius: 0 10px 10px 0;
+    
+    @include maxDevice(1440px){
+        width: 260px;
+    }
+
+    .nav{
+        @include flex-direction(column);
+        padding: 0 34px 30px;
+
+        @include maxDevice(1440px){
+            padding: 0 15px 20px;
+        }
+
+        a{
+            color: $white;
+            @include flexbox();
+            padding: 15px 20px;
+            @include align-items(center);
+            border: 2px solid rgba(255, 255, 255, 0.0);
+
+            @include maxDevice(1440px){
+                padding: 10px 15px;
+            }
+
+            svg{
+                margin-right: 14px;
+            }
+
+            &:hover, &.active{
+                background: linear-gradient(326.98deg, rgba(255, 255, 255, 0) -32.47%, rgba(255, 255, 255, 0.135) 183.06%);
+                border: 2px solid rgba(255, 255, 255, 0.1);
+                border-radius: 6px;
+            }
+        }
+    }
+
+    .social-icons{
+        a{
+            @include maxDevice(1440px){
+                width: 35px;
+                height: 35px;
+                
+                svg{
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+        a + a{
+            margin-left: 8px;
+
+            @include maxDevice(1440px){
+                margin-left: 5px;
+
+                svg{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,4 @@
+{
+    "algodclient": "https://testnet-api.algonode.cloud",
+    "indexerclient": "https://testnet-idx.algonode.cloud"
+}

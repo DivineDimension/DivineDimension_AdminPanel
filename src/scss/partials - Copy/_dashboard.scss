@@ -1,0 +1,173 @@
+.dashboard{
+    &-inner{
+        background: linear-gradient(156.98deg, #0C0C0E -33.63%, #0D0B12 94.61%);
+        padding-left: 350px;
+        padding-top: 140px;
+        position: relative;
+
+        @include maxDevice(1440px){
+            padding-left: 260px;
+            padding-top: 120px;
+        }
+
+        @include maxDevice(1199px){
+            padding-left: 0;
+            padding-top: 155px;
+        }
+
+        .header{
+            padding-left: 350px;
+            padding-top: 40px;
+
+            @include maxDevice(1440px){
+                padding-left: 260px;
+            }
+            @include maxDevice(1199px){
+                padding-left: 0;
+                padding: 0;
+            }
+        }
+
+        & > .container-lg{
+            min-height: 95vh;
+        }
+
+        .container-lg{
+            z-index: 9;
+            max-width: 100%;
+            position: relative;
+            padding-left: 100px;
+            padding-right: 100px;
+
+            @include minDevice(1680px){
+                padding-left: 150px;
+                padding-right: 150px;
+            }
+            @include maxDevice(1440px){
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+
+        .navbar{
+            &-brand img{
+                margin: -20px -30px  -32px;
+            }
+
+            &-nav{
+                a{
+                    svg{
+                        margin-right: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    &-bg{
+        position: absolute;
+        // z-index: -1;
+
+        &-tr{
+            top: 0;
+            right: 0;
+            width: 20%;
+        }
+
+        &-bl{
+            bottom: 5%;
+            left: 100px;
+            width: 38%;
+        }
+    }
+}
+
+.value{
+    &-card{
+        width: 100%;
+        padding: 5px;
+        height: 120px;
+        background: linear-gradient(107.61deg, rgba(213, 145, 255, 0.15) 3.29%, rgba(145, 156, 255, 0.15) 52.44%, rgba(145, 235, 255, 0.15) 100.42%);
+        backdrop-filter: blur(50px);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        position: relative;
+        text-align: center;
+        z-index: 1;
+
+        @include maxDevice(1440px){
+            padding: 10px !important;
+            height: 90px;
+        }
+
+        &:before{
+            background: url('../../assets/images/card-circles.png') no-repeat bottom right / auto;
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            left: 0;
+            top: 0;
+        }
+
+        span{
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 28px;
+            margin-bottom: 5px;
+            color: #00EAFC;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+
+            @include maxDevice(1440px){
+                
+                margin-bottom: 0;
+            }
+        }
+
+        strong{
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 28px;  
+            letter-spacing: 0.02em;
+
+            @include maxDevice(1440px){
+                font-size: 15px;
+            }
+        }
+
+        .btn-filter{
+            margin-left: 8px;
+            font-size: inherit;
+            padding: 5px 10px !important;
+
+            img{
+                width: 18px;
+                height: 18px;
+                min-width: 16px;
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+.note{
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    backdrop-filter: blur(16px);
+    letter-spacing: 0.02em;
+    border-radius: 16px;
+    padding: 18px 10px;
+    font-size: 16px;
+    color: $dark;
+
+    @include maxDevice(767px){
+        
+    }
+
+    svg{
+        margin-right: 6px;
+        margin-top: 3px;
+        min-width: 16px;
+    }
+}

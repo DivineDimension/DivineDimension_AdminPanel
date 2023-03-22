@@ -1,0 +1,120 @@
+.footer{
+    font-size: 15px;
+    line-height: 32px;
+    color: #D2D2D2;
+    font-weight: 300;
+    position: relative;
+    z-index: 1;
+
+    // &-inner{
+    //     &:before{
+    //         background: radial-gradient(208.4% 189.46% at 146.99% 111.19%, #1F95C1 27.74%, #6501C8 71.87%, #161C1B 100%);
+    //         filter: blur(134px);
+    //         position: absolute;
+    //         height: 240px;
+    //         width: 240px;
+    //         content: "";
+    //         left: 15%;
+    //         bottom: 15%;    
+    //     }
+    // }
+
+    p{
+        font-weight: 300;
+    }
+
+    hr{
+        margin-bottom: 100px;
+
+        @include maxDevice(767px){
+            margin-bottom: 40px;
+        }
+    }
+
+    &-purple{
+        position: absolute;
+        bottom: 150%;
+        z-index: -1;
+        left: 0;
+
+        @include maxDevice(767px){
+            bottom: 0;
+            left: -20px;
+            width: 80px;
+            top: -90px;
+        }
+    }
+
+    &-shape{
+        &-1{
+            position: absolute;
+            max-width: 100%;
+            opacity: 0.5;
+            z-index: -1;
+            bottom: 0;
+            right: 0;
+
+            @include maxDevice(767px){
+                max-width: 140px;
+                display: none;
+            }
+        }
+        &-2{
+            position: absolute;
+            z-index: -1;
+            bottom: 3%;
+            left: -10%;
+
+            @include maxDevice(767px){
+                max-width: 280px;
+                margin: auto;
+                bottom: 0;
+                top: -180px;
+                right: 0;
+                left: 0;
+            }
+        }
+    }
+}
+
+.social{
+    &-icons{
+        a{
+            box-shadow: -5px 0px 40px rgba(0, 156, 153, 0.1),  5px 0 40px rgba(0, 234, 252, 0.05), 0px 5px 50px rgba(83, 47, 177, 0.4), 0 -5px 50px rgba(32, 132, 224, 0.2);
+            background: linear-gradient(326.98deg, rgba(255, 255, 255, 0) -32.47%, rgba(255, 255, 255, 0.135) 183.06%);
+            border: 1px rgba(255, 255, 255, 0.21) solid;
+            border-radius: 6px;
+            display: flex;
+            height: 46px;
+            width: 46px;
+            color: $white;
+
+
+            &:hover{
+                box-shadow: 5px 0px 40px rgba(0, 156, 153, 0.1),  -5px 0 40px rgba(0, 234, 252, 0.05), 0px -5px 50px rgba(83, 47, 177, 0.4), 0 5px 50px rgba(29, 44, 58, 0.2);
+                background-color: $white;
+                color: $dark;
+            }
+
+            svg{
+                margin: auto;
+            }
+
+            & + a{
+                margin-left: 20px;
+
+                @include maxDevice(991px){
+                    margin-left: 6px;
+                    height: 42px;
+                    width: 42px;
+                }
+            }
+        }
+    }
+}
+
+.copyright{
+    margin-top: 50px;
+    padding: 20px 0;
+    border-top: 1px solid #222222;
+}
